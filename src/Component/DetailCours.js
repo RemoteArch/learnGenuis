@@ -10,7 +10,7 @@ import { useState } from 'react';
 const Apercu = () => {
     return (
         <div>
-            <video controls style={{ width: '80%', marginTop: '3rem', marginBottom: '1rem' }}>
+            {/* <video controls style={{ width: '80%', marginTop: '3rem', marginBottom: '1rem' }}>
                 <source style={{
                     width: '100%',
                     height: 'auto',
@@ -18,7 +18,7 @@ const Apercu = () => {
                     display: 'block',
                 }}
                     src={bl} type="video/mp4" />
-            </video>
+            </video> */}
             <div>
                 <p style={{ lineHeight: '2rem' }}>
                     <strong>Le protocole TCP/IP</strong> (<strong>Transmission Control Protocol/Internet Protocol</strong>) est la base des réseaux
