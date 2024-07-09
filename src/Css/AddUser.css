@@ -1,0 +1,301 @@
+.App-adduser {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    /* padding: 2rem; */
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.App-adduser .p-adduser {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.App-adduser .blc-adduser {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: 1px solid gainsboro;
+    margin-bottom: 3rem;
+
+
+}
+.App-adduser::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+.App-adduser .blc-adduser form {
+    display: flex;
+    flex-direction: column;
+}
+
+.App-adduser .blc-adduser form .input-blc {
+    width: 100%;
+    display: flex;
+}
+
+.App-adduser .blc-adduser form .input-blc div {
+    height: 3rem;
+    background-color: gainsboro;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border: 1px solid rgb(201, 201, 201);
+    box-shadow: 0 0 1px gainsboro;
+
+}
+
+.App-adduser .blc-adduser form .input-blc div img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.App-adduser .blc-adduser form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+    margin-top: 1rem;
+    /* a dynamiser */
+    /* transform: translateY(2rem);*/
+    /* margin-left: 4rem; */
+    /* a dynamiser */
+
+}
+
+.App-adduser .blc-adduser form .input-blc input {
+    height: 3rem;
+    width: 30rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: 1px solid gainsboro;
+    outline: none;
+    padding-left: 1rem;
+    box-shadow: 0 0 1px gainsboro;
+}
+
+
+.App-adduser .blc-adduser form .input-blc input:focus {
+    border-color: var(--bleue);
+}
+
+.App-adduser .slt-add-user {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid gainsboro;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.App-adduser .slt-add-user .desc-add {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4rem;
+}
+
+.App-adduser .slt-add-user .title {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.App-adduser .slt-add-user .desc-add p {
+    font-size: 0.8rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.App-adduser .slt-add-user .slt-radio {
+    background: ghostwhite;
+    width: 2.5rem;
+    height: 1.2rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0.2rem;
+    border: 1px solid gainsboro;
+    /* position: relative; */
+}
+
+.App-adduser .slt-add-user .slt-radio div {
+    background-color: white;
+    border-radius: 10rem;
+    width: 1rem;
+    height: 1rem;
+    animation: identifier 1s linear infinite;
+    transition: all .2s ease;
+}
+
+
+.App-adduser .slt-add-user .blc-table-user {
+    /* background-color: red; */
+    width: 100%;
+    /* height: 20rem; */
+    margin-top: 1rem;
+    border-top: 1px solid gainsboro;
+}
+
+.App-adduser .slt-add-user .blc-table-user table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: Arial, sans-serif;
+    border: 1px solid gainsboro;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.App-adduser .slt-add-user .blc-table-user th:nth-of-type(1) input,
+.App-adduser .slt-add-user .blc-table-user td:nth-of-type(1) input {
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid gainsboro;
+    padding: 0.1rem;
+    border-radius: 0.2rem;
+}
+
+.App-adduser .slt-add-user .blc-table-user th {
+    font-size: 0.7rem;
+    color: var(--gray);
+    background-color: ghostwhite;
+
+
+}
+
+.App-adduser .slt-add-user .blc-table-user th,
+.App-adduser .slt-add-user .blc-table-user td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid gainsboro;
+    font-size: 0.8rem;
+
+}
+
+.App-adduser .slt-add-user .blc-table-user td:nth-of-type(2) {
+    font-weight: bold;
+}
+
+.App-adduser .slt-add-user .blc-table-user td:nth-of-type(4) p {
+    background-color: rgba(162, 207, 165, 0.849);
+    border-radius: 5rem;
+    padding: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.App-adduser .slt-add-user .blc-table-user .fa-encadreur {
+    /* background-color: red; */
+    width: 100%;
+    height: 10rem;
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.App-adduser .slt-add-user h2,
+.App-adduser .slt-add-user h2 {
+    font-size: 0.9rem;
+
+}
+
+/* non achever pur le hover */
+.App-adduser .slt-add-user input {
+    height: 3rem;
+    width: 100%;
+    padding-left: 1rem;
+    border: 1px solid gainsboro;
+    outline: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px gainsboro;
+}
+
+/* non achever pur le hover */
+
+
+.App-adduser .slt-add-user .blc-table-user .fa-encadreur p,
+.App-adduser .slt-add-user .blc-table-user .fa-connexion .fa-fa-connexion p {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.App-adduser .slt-add-user .blc-table-user .fa-connexion {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: -2rem;
+}
+
+.App-adduser .slt-add-user .blc-table-user .fa-connexion .add-connexion {
+    /* background-color: yellow; */
+    height: 100%;
+    width: 10%;
+}
+
+.App-adduser .slt-add-user .blc-table-user .fa-connexion .fa-fa-connexion {
+    /* background-color: green; */
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.App-adduser .slt-add-user .blc-add-mod {
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+.App-adduser .div-send{
+   display: flex;
+   justify-content: end;
+   align-items: center;
+    /* background-color: red; */
+    margin-top: 1rem;
+    height: 4rem;
+    gap: 1rem;
+}
+.App-adduser .div-send a,
+.App-adduser .div-send button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 6rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid gainsboro;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.App-adduser .div-send a{
+    background: var(--linear-bg-white);
+}
+.App-adduser .div-send button{
+    background: var(--linear-bg-black);
+
+}
+
+/* .App-adduser .blc-adduser form input{ */

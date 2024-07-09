@@ -1,0 +1,393 @@
+.App-formation {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+
+.App-formation::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0px;
+}
+
+.App-formation .entete-formation {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    margin-top: 2rem;
+}
+
+.App-formation .entete-formation h1 {
+    margin-bottom: 1rem;
+}
+
+.App-formation .entete-formation ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid gainsboro;
+}
+
+.App-formation .entete-formation ul li {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.App-formation .entete-formation ul li:hover {
+
+    background-color: var(--bleuehover-trans);
+
+}
+
+.App-formation .entete-formation ul li span {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+
+}
+
+.activelinkform {
+    font-weight: bold;
+    border-bottom: 2px solid var(--bleue);
+}
+
+.App-formation .entete-formation .fa-entete-formation {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.App-formation .entete-formation .fa-entete-formation p {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.App-formation .entete-formation .fa-entete-formation div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(1),
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(2) {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 5px rgb(196, 189, 189);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 0.1rem;
+}
+
+.App-formation .entete-formation .fa-entete-formation img {
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(1) img,
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(2) img {
+    height: 60%;
+    width: 60%;
+
+}
+
+.App-formation .entete-formation .fa-entete-formation a {
+    border: 2px solid gray;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+}
+
+.App-formation .entete-formation .fa-entete-formation a:hover {
+    color: grey;
+}
+
+.App-formation .entete-formation .fa-entete-formation a img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.App-formation .center-formation {
+    background-color: white;
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+}
+
+.App-formation .center-formation .entete-filter {
+    width: 100%;
+    /* background-color: red; */
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+
+
+}
+
+.App-formation .center-formation .entete-filter .span {
+    /* background-color: red; */
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    left: 1.5rem;
+}
+
+.App-formation .center-formation .entete-filter .span img {
+    height: 100%;
+    width: 100%;
+}
+
+.App-formation .center-formation .entete-filter input {
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    padding-left: 2rem;
+    border: none;
+    box-shadow: 0 0 3px gainsboro;
+    border: 1px solid gainsboro;
+}
+
+.App-formation .center-formation .entete-filter input:focus {
+    outline: none;
+}
+
+.App-formation .center-formation .entete-filter input::placeholder {
+    font-size: 0.9rem;
+    color: gainsboro;
+    text-shadow: 0 0 0 grey;
+}
+
+.App-formation .center-formation .entete-filter div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.App-formation .center-formation .entete-filter div span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.App-formation .center-formation .entete-filter div span img {
+    height: 1rem;
+    width: 1rem;
+}
+
+.App-formation .formarution-items {
+    /* background-color: red; */
+    width: 100%;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes avec une fraction égale */
+    grid-auto-rows: minmax(18rem, auto);
+    /* Hauteur de ligne dynamique, minimum 100px */
+    grid-gap: 20px;
+    /* Espacement entre les éléments de la grille */
+    padding: 0 0.5rem 0;
+}
+
+.App-formation .formarution-list table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid gainsboro;
+}
+
+.App-formation .formarution-list th {
+    font-size: 0.7rem;
+    color: var(--gray);
+    background-color: ghostwhite;
+
+
+}
+
+.App-formation .formarution-list th,
+.App-formation .formarution-list td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid gainsboro;
+    font-size: 0.8rem;
+
+}
+
+.App-formation .formarution-list th:nth-child(2) {
+    width: 30%;
+}
+
+.App-formation .formarution-list .action-button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+}
+
+.App-formation .formarution-list .action-button:hover {
+    background-color: ghostwhite;
+
+}
+
+.App-formation .formarution-list .trois-points {
+    width: 16px;
+    height: 16px;
+}
+
+.App-formation .formarution-items .formarution-item {
+    /* background-color: green; */
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 0 5px gainsboro;
+    border: 1px solid gainsboro;
+
+}
+
+.App-formation .formarution-items .formarution-item:hover {
+    box-shadow: 0 0 10px gray;
+
+}
+
+.App-formation .formarution-items .formarution-item a {
+    background-color: rgba(0, 0, 0, 0.568);
+    width: 100%;
+    height: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.App-formation .formarution-items .formarution-item a:hover div:nth-of-type(2) {
+    visibility: visible;
+}
+
+.App-formation .formarution-items .formarution-item a div:nth-of-type(1) img {
+
+    height: 1.2rem;
+    width: 1.2rem;
+    position: absolute;
+    left: 0.2rem;
+    top: 0.2rem;
+    z-index: 5;
+    cursor: default;
+    cursor: pointer;
+}
+
+.App-formation .formarution-items .formarution-item a div:nth-of-type(2) {
+    background-color: white;
+    border-radius: 0 0 0 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    visibility: hidden;
+}
+
+.App-formation .formarution-items .formarution-item a div img {
+    height: 50%;
+    width: 50%;
+}
+
+.App-formation .formarution-items .formarution-item .div {
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.App-formation .formarution-items .formarution-item .div .desc-form {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 0.5rem 0.5rem;
+    gap: 1rem;
+
+}
+
+.App-formation .formarution-items .formarution-item .div p {
+    font-size: 0.9rem;
+    color: gray;
+    font-weight: 400;
+}
+
+.App-formation .formarution-items .formarution-item .div .member-notif {
+    width: 100%;
+    /* background-color: red; */
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid gainsboro;
+}
+
+.App-formation .formarution-items .formarution-item .div .member-notif span {
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.App-formation .formarution-items .formarution-item .div .member-notif span img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.App-formation .formarution-items .formarution-item .div .member-notif .member,
+.App-formation .formarution-items .formarution-item .div .member-notif .notif {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid gainsboro;
+}
+
+.App-formation .formarution-items .formarution-item .div .member-notif .member {
+    border: none;
+}

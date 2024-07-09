@@ -1,0 +1,74 @@
+/* content */
+.App-content {
+    width: 66%;
+    background-color: ghostwhite;
+    border-width: 1px solid var(--gray);
+    height: 100%;
+    position: relative;
+}
+
+.App-content .hearder-content {
+    background-color: ghostwhite;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.App-content .App-component{
+    width: 100%;
+    height: 92%;
+    padding: 1rem; 
+}
+
+.App-content .hearder-content p {
+    font-weight: bold;
+}
+
+.App-content .hearder-content div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.App-content .hearder-content .input {
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.App-content .hearder-content input {
+    width: 40rem;
+    border: none;
+    border: 1px solid rgba(168, 166, 166, 0.863);
+    height: 2.5rem;
+    padding-left: 1rem;
+    border-radius: 5rem;
+}
+
+.App-content .hearder-content div button {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    margin-left: -2.3rem;
+    border-radius: 5rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+.App-content .hearder-content div button img {
+    width: 80%;
+    height: 80%;
+}
+
+.App-content .hearder-content input:focus,
+.App-content .hearder-content button:focus {
+    outline: none;
+
+}
+
+/* end content */

@@ -1,0 +1,10 @@
+.App-addformation{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: ghostwhite;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}

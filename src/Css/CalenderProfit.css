@@ -1,0 +1,286 @@
+/* Calenderprofit*/
+.App-Calenderprofit {
+    width: 22%;
+    background-color: white;
+    height: 100%;
+    padding: 0 0 0 1rem;
+
+}
+
+.App-Calenderprofit .header-calendar {
+    /* background-color: red; */
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    padding-right: 1rem;
+}
+
+.App-Calenderprofit .header-calendar span {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    position: relative;
+    background-color: rgba(152, 152, 255, 0.562);
+}
+
+.App-Calenderprofit .header-calendar span:nth-of-type(2) {
+    margin-left: -4rem;
+}
+
+.App-Calenderprofit .header-calendar div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.App-Calenderprofit .header-calendar span img {
+    width: 60%;
+    height: 60%;
+}
+
+.App-Calenderprofit .header-calendar span i {
+    position: absolute;
+    top: 0;
+    right: -0.2rem;
+    background-color: var(--bleue);
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 10rem;
+}
+
+.App-Calenderprofit .overflow-calendar {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 90%;
+    width: 100%;
+    padding-right: 1rem;
+}
+
+.App-Calenderprofit .center-calendar {
+    /* background-color: purple; */
+    width: 100%;
+    height: 20rem;
+    margin-top: 2rem;
+}
+
+.App-Calenderprofit .footer-calendar {
+    width: 100%;
+    /* background-color: yellow; */
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+}
+
+.App-Calenderprofit .footer-calendar .txt-entete {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.App-Calenderprofit .footer-calendar .txt-entete p {
+    font-weight: 400;
+}
+
+.App-Calenderprofit .footer-calendar .txt-entete span {
+    background-color: var(--gray);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem 4rem 4rem 4rem;
+    color: white;
+    font-weight: 400;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    cursor: pointer;
+}
+
+.App-Calenderprofit .footer-calendar .notifs-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.App-Calenderprofit .footer-calendar .notifs-items .notif-item {
+    border: 2px solid rgba(197, 197, 197, 0.24);
+    border-radius: 0.2rem;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+}
+
+.App-Calenderprofit .footer-calendar .notifs-items .notif-item p {
+    font-weight: bold;
+    color: var(--bleuefonce);
+}
+
+.App-Calenderprofit .footer-calendar .notifs-items .notif-item p:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 0.7rem;
+    color: var(--gray);
+}
+
+.App-Calenderprofit .footer-calendar .notifs-items .notif-item span {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+}
+
+.App-Calenderprofit .footer-calendar .notifs-items .notif-item span:nth-of-type(1) {
+    width: 3rem;
+    height: 3rem;
+
+}
+
+.App-Calenderprofit .footer-calendar .notifs-items .notif-item span:nth-of-type(2):hover {
+    background-color: rgba(152, 152, 255, 0.562);
+    cursor: pointer;
+
+}
+
+.App-Calenderprofit .footer-calendar .notifs-items .notif-item span img {
+    width: 80%;
+    height: 80%;
+}
+
+/* Cible la barre de défilement d'un élément en particulier */
+::-webkit-scrollbar {
+
+    width: 8px;
+    /* Largeur de la barre de défilement */
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    /* Couleur de fond de la piste */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a6a6a6;
+    /* Couleur du pouce */
+    border-radius: 4px;
+    /* Rayon des coins du pouce */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #8c8c8c;
+    /* width: 23rem; */
+}
+
+.App-Calenderprofit .center-calendar .calendar {
+    width: 100%;
+    height: 100%;
+    /* font-family: Arial, sans-serif; */
+    background-color: #fff;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.App-Calenderprofit .center-calendar .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: var(--noir);
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.App-Calenderprofit .center-calendar .calendar-header button {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgba(202, 200, 200, 0.726);
+    border-radius: 10rem;
+}
+
+.App-Calenderprofit .center-calendar .calendar-header button img {
+    width: 60%;
+    height: 60%;
+}
+
+.App-Calenderprofit .center-calendar .calendar-body {
+    padding: 10px;
+}
+
+.App-Calenderprofit .center-calendar .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.App-Calenderprofit .center-calendar .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.App-Calenderprofit .center-calendar .calendar-day {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.App-Calenderprofit .center-calendar .calendar-day.prev-month,
+.App-Calenderprofit .center-calendar .calendar-day.next-month {
+    color: #ccc;
+}
+
+.App-Calenderprofit .center-calendar .calendar-day.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.App-Calenderprofit .center-calendar .calendar-day:hover {
+    background-color: #f2f2f2;
+}
+
+.App-Calenderprofit .center-calendar .calendar-footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* end Calenderprofit*/
