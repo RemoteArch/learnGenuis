@@ -14,19 +14,17 @@
 
 .App-adduser .blc-adduser {
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 0.2rem;
     padding: 1rem;
     margin-top: 2rem;
     border: 1px solid gainsboro;
-    margin-bottom: 3rem;
-
 
 }
-.App-adduser::-webkit-scrollbar {
+
+/* ::-webkit-scrollbar{
     width: 0;
-    height: 0;
     visibility: hidden;
-  }
+} */
 
 .App-adduser .blc-adduser form {
     display: flex;
@@ -266,36 +264,6 @@
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 1rem;
-}
-.App-adduser .div-send{
-   display: flex;
-   justify-content: end;
-   align-items: center;
-    /* background-color: red; */
-    margin-top: 1rem;
-    height: 4rem;
-    gap: 1rem;
-}
-.App-adduser .div-send a,
-.App-adduser .div-send button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-    width: 6rem;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid gainsboro;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-}
-.App-adduser .div-send a{
-    background: var(--linear-bg-white);
-}
-.App-adduser .div-send button{
-    background: var(--linear-bg-black);
-
 }
 
 /* .App-adduser .blc-adduser form input{ */

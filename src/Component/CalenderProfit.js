@@ -5,10 +5,23 @@ import profit from '../Images/profit.png'
 import dotverti from '../Images/dotverti.png'
 import arrowleft from '../Images/arrowleft.png'
 import arrowrigth from '../Images/arrowrigth.png'
-import { useState } from 'react';
-export default function CalenderProfit() {
+import { useState ,useEffect } from 'react';
+import config from '../config';
+
+export default function CalenderProfit({data}) {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [currentYear, setCurrentYear] = useState(selectedDate.getFullYear());
+    const [notifs , setNotif] = useState(Array(0).fill({nom:"hello" , desc:"un nouveau poste a 19h30"}));
+    
+    useEffect(()=>{
+        const fetchNotify = async ()=>{
+            let rep = await fetch(config.apiUrl+"/getNotification").then(rep=>rep.json())
+            if(rep.statut == "success"){
+                setNotif(rep.data)
+            }
+        }
+        fetchNotify();
+      },[])
 
     const daysInMonth = (year, month) => {
         return new Date(year, month + 1, 0).getDate();
@@ -93,7 +106,7 @@ export default function CalenderProfit() {
             <div className='header-calendar'>
                 <span><img src={bel} /><i></i></span>
                 <span><img src={mail} /><i></i></span>
-                <div>Kammogne <span><img src={profit} /></span></div>
+                <div>{data.name} <span><img src={profit} /></span></div>
             </div>
             <div className='overflow-calendar'>
                 <div className='center-calendar'>
@@ -121,43 +134,22 @@ export default function CalenderProfit() {
                 <div className='footer-calendar'>
                     <div className='txt-entete'>
                         <p>Poste & notification</p>
-                        <span>Tout effacer</span>
+                        <span onClick={()=>setNotif(Array())}>Tout effacer</span>
                     </div>
 
                     <div className='notifs-items'>
-                        <div className='notif-item'>
-                            <span><img src={profit} /></span>
-                            <div>
-                                <p>Kammogne yvan</p>
-                                <p> nouveau paoste 9:10</p>
-                            </div>
-                            <span><img src={dotverti} /></span>
-                        </div>
-                        <div className='notif-item'>
-                            <span><img src={profit} /></span>
-                            <div>
-                                <p>Augustin fopa</p>
-                                <p> nouveau paoste 19:10</p>
-                            </div>
-                            <span><img src={dotverti} /></span>
-                        </div>
-                        <div className='notif-item'>
-                            <span><img src={profit} /></span>
-                            <div>
-                                <p>Sylvin flobert</p>
-                                <p> nouveau message 4:10</p>
-                            </div>
-                            <span><img src={dotverti} /></span>
-                        </div>
-                        <div className='notif-item'>
-                            <span><img src={profit} /></span>
-                            <div>
-                                <p>Nono maxwell</p>
-                                <p> nouveau paoste 9:10</p>
-                            </div>
-                            <span><img src={dotverti} /></span>
-                        </div>
-
+                        {
+                            notifs.map((notif) =>(
+                                <div className='notif-item'>
+                                    <span><img src={profit} /></span>
+                                    <div>
+                                        <p>{notif.nom}</p>
+                                        <p>{notif.desc}</p>
+                                    </div>
+                                    <span><img src={dotverti} /></span>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

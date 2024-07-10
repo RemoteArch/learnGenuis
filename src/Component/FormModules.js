@@ -1,6 +1,5 @@
-
-
 import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import '../Css/Formation.css';
 import liste from '../Images/liste.png';
@@ -14,18 +13,42 @@ import group from '../Images/group.png';
 import notifspeaker from '../Images/notifspeak.png';
 import whitestar from '../Images/whitestar.png';
 import search from '../Images/search.png';
-export default function FormModules() {
+export default function FormModules({data}) {
+
+    const [showGrid , setshowGrid] = useState(false);
+
+    const changeshow = ()=>{
+        setshowGrid(showGrid ? false : true)
+    }
+    const [formationData , setFormationdata] = useState(Array());
+    
+    useEffect(() => {
+        const updateData = async ()=>{
+            let id = localStorage.getItem("user")
+            setFormationdata(Array())
+            data.forEach(form => {
+                if(form.userid == id){
+                    setFormationdata((prev)=>([...prev,form]))
+                }
+            });
+        }
+        updateData();
+    },[]);
+
     return (
         <div className='entete-formation'>
             <div className='fa-entete-formation'>
-                <p>1 Formation</p>
+                <p>{formationData.length} Formation</p>
                 <div>
-                    <NavLink to='/Formations/detail cours/AddFormation'><img src={plus} />Creer une formation</NavLink>
+                    <span><img src={plus} />Creer une formation</span>
                     <i><img src={start} /></i>
-                    <span><img src={monospace} /></span>
-                    <span><img src={liste} /></span>
+                    
+                    {!showGrid && <span onClick={changeshow}><img src={monospace} /></span>}
+
+                    {showGrid && <span onClick={changeshow}><img src={liste} /></span>}
                 </div>
             </div>
+            { !showGrid && formationData.length !=0 &&
             <div className='center-formation'>
                 <div className='entete-filter'>
                     <input type='search' placeholder='Rechercher une formation' />
@@ -36,7 +59,6 @@ export default function FormModules() {
                     </div>
                 </div>
                 <div className='formarution-list'>
-
                     <table>
                         <tr>
                             <th>Nom</th>
@@ -45,226 +67,52 @@ export default function FormModules() {
                             <th>Favoris</th>
                             <th>Action</th>
                         </tr>
-                        <tr>
-                            <td><strong>Projet A</strong></td>
-                            <td>Methode par modules prepares</td>
-                            <td>10</td>
-                            <td>5</td>
-                            <td>
-                                <button className="action-button">
-                                    <img src={dot} className="trois-points" />
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Projet A</strong></td>
-                            <td>Methode par modules prepares</td>
-                            <td>10</td>
-                            <td>5</td>
-                            <td>
-                                <button className="action-button">
-                                    <img src={dot} className="trois-points" />
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Projet A</strong></td>
-                            <td>Methode par modules prepares</td>
-                            <td>10</td>
-                            <td>5</td>
-                            <td>
-                                <button className="action-button">
-                                    <img src={dot} className="trois-points" />
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Projet A</strong></td>
-                            <td>Methode par modules prepares</td>
-                            <td>10</td>
-                            <td>5</td>
-                            <td>
-                                <button className="action-button">
-                                    <img src={dot} className="trois-points" />
-                                </button>
-                            </td>
-                        </tr>
+                        { formationData.map((formation)=>(
+                            <tr>
+                                <td><strong>{formation.nom}</strong></td>
+                                <td>{formation.method}</td>
+                                <td>{formation.nbreMembre}</td>
+                                <td>{formation.nbreFavories}</td>
+                                <td>
+                                    <button className="action-button">
+                                        <img src={dot} className="trois-points" />
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
                     </table>
 
                 </div>
 
             </div>
+            }
+            { showGrid &&
             <div className='formarution-items'>
-                <div className='formarution-item'>
-                    <NavLink>
-                        {/* <img src={tri} /> */}
-                        <div><img src={whitestar} /></div>
-                        <div><img src={dot} /></div>
-                    </NavLink>
-                    <div className='div'>
-                        <div className='desc-form'>
-                            <p><strong>React js</strong></p>
-                            <p>Constitiuer de 0 modules et<br /> 0 Pages</p>
-                        </div>
-                        <div className='member-notif'>
-                            <div className='member'>
-                                <span><img src={group} /> 0</span>
+                { formationData.map((formation)=>(
+                    <div className='formarution-item'>
+                        <NavLink>
+                            {/* <img src={tri} /> */}
+                            <div><img src={whitestar} /></div>
+                            <div><img src={dot} /></div>
+                        </NavLink>
+                        <div className='div'>
+                            <div className='desc-form'>
+                                <p><strong>{formation.nom}</strong></p>
+                                <p>Constitiuer de {formation.nbreModules} modules et<br /> {formation.nbrePages} Pages</p>
                             </div>
-                            <div className='notif'>
-                                <span><img src={notifspeaker} /> 0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='formarution-item'>
-                    <NavLink>
-                        {/* <img src={tri} /> */}
-                        <div><img src={whitestar} /></div>
-                        <div><img src={dot} /></div>
-                    </NavLink>
-                    <div className='div'>
-                        <div className='desc-form'>
-                            <p><strong>React js</strong></p>
-                            <p>Constitiuer de 0 modules et<br /> 0 Pages</p>
-                        </div>
-                        <div className='member-notif'>
-                            <div className='member'>
-                                <span><img src={group} /> 0</span>
-                            </div>
-                            <div className='notif'>
-                                <span><img src={notifspeaker} /> 0</span>
+                            <div className='member-notif'>
+                                <div className='member'>
+                                    <span><img src={group} /> {formation.nbreAbonne}</span>
+                                </div>
+                                <div className='notif'>
+                                    <span><img src={notifspeaker} /> {formation.nbreMembre}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className='formarution-item'>
-                    <NavLink>
-                        {/* <img src={tri} /> */}
-                        <div><img src={whitestar} /></div>
-                        <div><img src={dot} /></div>
-                    </NavLink>
-                    <div className='div'>
-                        <div className='desc-form'>
-                            <p><strong>React js</strong></p>
-                            <p>Constitiuer de 0 modules et<br /> 0 Pages</p>
-                        </div>
-                        <div className='member-notif'>
-                            <div className='member'>
-                                <span><img src={group} /> 0</span>
-                            </div>
-                            <div className='notif'>
-                                <span><img src={notifspeaker} /> 0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='formarution-item'>
-                    <NavLink>
-                        {/* <img src={tri} /> */}
-                        <div><img src={whitestar} /></div>
-                        <div><img src={dot} /></div>
-                    </NavLink>
-                    <div className='div'>
-                        <div className='desc-form'>
-                            <p><strong>React js</strong></p>
-                            <p>Constitiuer de 0 modules et<br /> 0 Pages</p>
-                        </div>
-                        <div className='member-notif'>
-                            <div className='member'>
-                                <span><img src={group} /> 0</span>
-                            </div>
-                            <div className='notif'>
-                                <span><img src={notifspeaker} /> 0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='formarution-item'>
-                    <NavLink>
-                        {/* <img src={tri} /> */}
-                        <div><img src={whitestar} /></div>
-                        <div><img src={dot} /></div>
-                    </NavLink>
-                    <div className='div'>
-                        <div className='desc-form'>
-                            <p><strong>React js</strong></p>
-                            <p>Constitiuer de 0 modules et<br /> 0 Pages</p>
-                        </div>
-                        <div className='member-notif'>
-                            <div className='member'>
-                                <span><img src={group} /> 0</span>
-                            </div>
-                            <div className='notif'>
-                                <span><img src={notifspeaker} /> 0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='formarution-item'>
-                    <NavLink>
-                        {/* <img src={tri} /> */}
-                        <div><img src={whitestar} /></div>
-                        <div><img src={dot} /></div>
-                    </NavLink>
-                    <div className='div'>
-                        <div className='desc-form'>
-                            <p><strong>React js</strong></p>
-                            <p>Constitiuer de 0 modules et<br /> 0 Pages</p>
-                        </div>
-                        <div className='member-notif'>
-                            <div className='member'>
-                                <span><img src={group} /> 0</span>
-                            </div>
-                            <div className='notif'>
-                                <span><img src={notifspeaker} /> 0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='formarution-item'>
-                    <NavLink>
-                        {/* <img src={tri} /> */}
-                        <div><img src={whitestar} /></div>
-                        <div><img src={dot} /></div>
-                    </NavLink>
-                    <div className='div'>
-                        <div className='desc-form'>
-                            <p><strong>React js</strong></p>
-                            <p>Constitiuer de 0 modules et<br /> 0 Pages</p>
-                        </div>
-                        <div className='member-notif'>
-                            <div className='member'>
-                                <span><img src={group} /> 0</span>
-                            </div>
-                            <div className='notif'>
-                                <span><img src={notifspeaker} /> 0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='formarution-item'>
-                    <NavLink>
-                        {/* <img src={tri} /> */}
-                        <div><img src={whitestar} /></div>
-                        <div><img src={dot} /></div>
-                    </NavLink>
-                    <div className='div'>
-                        <div className='desc-form'>
-                            <p><strong>React js</strong></p>
-                            <p>Constitiuer de 0 modules et<br /> 0 Pages</p>
-                        </div>
-                        <div className='member-notif'>
-                            <div className='member'>
-                                <span><img src={group} /> 0</span>
-                            </div>
-                            <div className='notif'>
-                                <span><img src={notifspeaker} /> 0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                ))}
             </div>
+            }
         </div>
     );
 };

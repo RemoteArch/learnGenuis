@@ -9,7 +9,8 @@ import rigtharrow from '../Images/rigtharrow.png';
 import arrowleft from '../Images/arrowleft.png';
 import time from '../Images/time.png';
 import '../Css/CoursBlock.css';
-export default function CoursBlock() {
+export default function CoursBlock({data}) {
+
     return (
         <div className='App-coursblock'>
             <div className='entete-coursblock'>
@@ -17,43 +18,23 @@ export default function CoursBlock() {
                     <h1>Les cours libres acces</h1>
                     <div>Affichage par theme<img src={arrowleft}/></div>
                 </div>
+                
                 <div className='items-coursblock'>
-                    <NavLink to='/Formations/detail cours' className='fa-item-cours'>
+                { data.map((formation)=>(
+                    <NavLink to={'/Formations/detail/'+formation._id} className='fa-item-cours'>
                         <div className='img-desc'>
                             <img src={imgback} />
                         </div>
                         <div className='txt-desc'>
-                            <p>Reseau & securiser - cours</p>
-                            <p className='fa-desc'>Concevez votre systeme TCP/IP</p>
-                            <span><p><img src={niveau} /> facile</p><p><img src={time} /> 10 heures</p></span>
-                            <p>Vous revez de creer non seulement des sites web mais aussi des application wed completement dynaiser alors React js est la pour ca...</p>
+                            <p>{formation.categorie}</p>
+                            <p className='fa-desc'>{formation.nom}</p>
+                            <span><p><img src={niveau} /> {formation.niveau}</p><p><img src={time} /> {formation.nbreHeure} heures</p></span>
+                            <p>{formation.desc}</p>
                         </div>
                     </NavLink>
-
-                    <NavLink className='fa-item-cours'>
-                        <div className='img-desc'>
-                            <img src={fondbleue} />
-                        </div>
-                        <div className='txt-desc'>
-                            <p>Developpement - cours</p>
-                            <p className='fa-desc'>Apprener le framework React js</p>
-                            <span><p><img src={niveau} /> facile</p><p><img src={time} /> 6 heures</p></span>
-                            <p>Vous revez de creer non seulement des sites web mais aussi des application wed completement dynaiser alors React js est la pour ca...</p>
-                        </div>
-                    </NavLink>
-                    <NavLink className='fa-item-cours'>
-                        <div className='img-desc'>
-                            <img src={imgback} />
-                        </div>
-                        <div className='txt-desc'>
-                            <p>Bureatique - cours</p>
-                            <p className='fa-desc'>Maitriser les bases des suites Offices</p>
-                            <span><p><img src={niveau} /> facile</p><p><img src={time} /> 4 heures</p></span>
-                            <p>Vous revez de creer non seulement des sites web mais aussi des application wed completement dynaiser alors React js est la pour ca...</p>
-                        </div>
-                    </NavLink>
-
+                ))}
                 </div>
+                
                 <div className='slt-lvl-cours'>
                     <p><img src={leftarrow} /></p>
                     <p>1</p>

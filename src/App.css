@@ -33,12 +33,11 @@
   --vertbleuehover: #2bbbad;
   --bleueinfoshover: #33b5e5;
   --bleueinfos: #0099cc;
-  --bleuewhite: #d0effa;
   --bleuefonce: #202046;
   --gray: #646780;
   --noir: #343a40;
-  --linear-bg-white:linear-gradient(180deg, gainsboro 0%, rgb(202, 200, 200) 100%);
-  --linear-bg-black:linear-gradient(180deg, #3d46c5 0%, #373c83 100%);
+  --linear-bg-black:linear-gradient(180deg, #464862 0%, #252635 100%);
+  --linear-bg-black:linear-gradient(180deg, #3e49e6 0%, #252635 100%);
 }
 
 

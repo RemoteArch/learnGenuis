@@ -10,30 +10,8 @@
     gap: 1rem;
     padding: 1rem;
 }
-.App-detailcours .prerequis-av-chapter{
-    background-color: rgb(248, 219, 165);
-    padding: 2rem;
-    position: relative;
-    width: 70%;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.App-detailcours .prerequis-av-chapter img{
-    position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-}
-.App-detailcours .prerequis-av-chapter h1{
-    font-size: 1rem;
-    font-weight: 600;
-}
 
-.App-detailcours .entete-detailcours ,
-.div-link-av-coursid{
+.App-detailcours .entete-detailcours {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -41,9 +19,6 @@
     width: 100%;
     /* background-color: yellow; */
 
-}
-.div-link-av-coursid{
-    padding-bottom: 4rem;
 }
 
 .App-detailcours .entete-detailcours a:nth-of-type(1) {
@@ -128,9 +103,8 @@
     font-weight: bold;
 
 }
-.App-detailcours .entete-detailcours a:nth-of-type(2),
-.link-av-coursid
- {
+
+.App-detailcours .entete-detailcours a:nth-of-type(2) {
     background-color: var(--bleueinfos);
     color: white;
     border-radius: 0.2rem;
@@ -161,11 +135,11 @@
 .App-detailcours .link-page-cours ul li {
     height: 100%;
 }
- .App-detailcours .link-page-cours ul li span{
+.App-detailcours .link-page-cours ul li a{
+    text-decoration: none;
     height: 100%;
     display: block;
-    cursor: pointer;
-} 
+}
 .link-page{
     color: var(--bleueinfos);
     font-weight: bold;
