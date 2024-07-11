@@ -76,8 +76,8 @@
     gap: 0.5rem;
 }
 
-.App-formation .entete-formation .fa-entete-formation span:nth-of-type(1),
-.App-formation .entete-formation .fa-entete-formation span:nth-of-type(2) {
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(2),
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(3) {
     height: 2rem;
     width: 2rem;
     border-radius: 0.2rem;
@@ -96,14 +96,14 @@
     cursor: pointer;
 }
 
-.App-formation .entete-formation .fa-entete-formation span:nth-of-type(1) img,
-.App-formation .entete-formation .fa-entete-formation span:nth-of-type(2) img {
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(2) img,
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(3) img {
     height: 60%;
     width: 60%;
 
 }
 
-.App-formation .entete-formation .fa-entete-formation a {
+.App-formation .entete-formation .fa-entete-formation .span {
     border: 2px solid gray;
     border-radius: 0.4rem;
     cursor: pointer;
@@ -390,4 +390,112 @@
 
 .App-formation .formarution-items .formarution-item .div .member-notif .member {
     border: none;
+}
+
+
+
+.App-formationname {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.959);
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App-formationname .center-formationname {
+    background-color: white;
+    box-shadow: 0 0 15px rgb(223, 221, 221);
+    width: 50%;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.App-formationname .center-formationname .blc-formname {
+    height: 5rem;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+}
+
+.App-formationname .center-formationname .etetformname {
+    justify-content: space-between;
+    /* background-color: red; */
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+
+}
+
+.App-formationname .center-formationname .etetformname h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.App-formationname .center-formationname .etetformname span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.App-formationname .center-formationname .etetformname span:hover {
+    color: gray;
+}
+
+.App-formationname .center-formationname .centerformname {
+    flex-direction: column;
+    justify-content: start;
+    /* background-color: yellow; */
+    gap: 0.5rem;
+    height: 7rem;
+    border-bottom: 1px solid gainsboro;
+
+
+}
+
+.App-formationname .center-formationname .centerformname p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.App-formationname .center-formationname .centerformname input {
+    width: 100%;
+    height: 70%;
+    border-radius: 1rem;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0 10px gainsboro;
+    outline: none;
+    padding-left: 1rem;
+}
+.App-formationname .center-formationname .centerformname input:focus{
+border: 1px solid var(--rouge);}
+.App-formationname .center-formationname .centerformname input::placeholder {
+    color: gainsboro;
+    font-weight: 600;
+}
+
+.App-formationname .center-formationname .footerformname {
+    background-color: ghostwhite;
+    justify-content: end;
+}
+
+.App-formationname .center-formationname .footerformname a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--linear-bg-black);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    height: 3rem;
+    width: 4rem;
 }

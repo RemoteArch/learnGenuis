@@ -8,3 +8,65 @@
     overflow: hidden;
     overflow-y: auto;
 }
+.App-addformation .fa-center-add-formation{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+.App-addformation .fa-center-add-formation .link-back-form a{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    gap: 1rem;
+    font-weight: 400;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+.App-addformation .fa-center-add-formation .link-back-form a img{
+    width: 1rem;
+    height: 1rem;
+}
+.App-addformation .fa-center-add-formation .entete-name{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.App-addformation .fa-center-add-formation .entete-name div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.App-addformation .fa-center-add-formation .entete-name div a{
+    background-color: red;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid gainsboro;
+    font-weight: 600;
+    color: var(--gray);
+    font-size: 0.9rem;
+
+}
+.App-addformation .fa-center-add-formation .entete-name div span img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--noir);
+    cursor: pointer;
+}
+.App-addformation .fa-center-add-formation .entete-name div a:nth-of-type(2){
+    background: var(--linear-bg-black);
+    color: white;
+
+    border: none;
+}
+.App-addformation .fa-center-add-formation .entete-name img{
+    width: 1.5rem;
+    height: 1.5rem;
+}

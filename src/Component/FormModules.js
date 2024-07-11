@@ -14,13 +14,55 @@ import group from '../Images/group.png';
 import notifspeaker from '../Images/notifspeak.png';
 import whitestar from '../Images/whitestar.png';
 import search from '../Images/search.png';
+import { useState } from 'react';
+
 export default function FormModules() {
+    const [showformationname, setShowformationname] = useState(false);
+    const handleshowformationname = () => {
+        setShowformationname(!showformationname);
+    }
+    const Formationname = () => {
+        return (
+            <div className='App-formationname'  style={showformationname ? styleformname.opacity : null}>
+                <div className='center-formationname' style={showformationname ? styleformname.translatex : null}>
+                    <div className='etetformname blc-formname'>
+                        <h1>Creer une formation</h1>
+                        <span onClick={handleshowformationname}>Annuler</span>
+                    </div>
+                    <div className='centerformname blc-formname'>
+                        <p>Nom de la formation(Obligatoire)</p>
+                        <input type='texte' placeholder='Ma formation' />
+                    </div>
+                    <div className='footerformname blc-formname'>
+                        <NavLink to='/Formations/detail cours/AddFormation'>Creer</NavLink>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+    const styleformname = () => [
+        {
+            translatex: {
+                transform: ' translateY(45px)',
+                backgroundColor: 'red',
+                transition: 'all 2s ease',
+
+            },
+        },
+        {
+            opacity: {
+                opacity: '0',
+                transition: 'all 2s ease',
+            }
+        },
+    ]
     return (
         <div className='entete-formation'>
+            {showformationname && <Formationname />}
             <div className='fa-entete-formation'>
                 <p>1 Formation</p>
                 <div>
-                    <NavLink to='/Formations/detail cours/AddFormation'><img src={plus} />Creer une formation</NavLink>
+                    <span className='span' onClick={handleshowformationname}><img src={plus} />Creer une formation</span>
                     <i><img src={start} /></i>
                     <span><img src={monospace} /></span>
                     <span><img src={liste} /></span>
