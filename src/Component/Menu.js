@@ -1,4 +1,4 @@
-import React from "react";
+import {React , useEffect, useState} from "react";
 import '../Css/Menu.css';
 import logo from '../Images/App-logo.png';
 import home from '../Images/home.png';
@@ -16,9 +16,8 @@ import startupgrade from '../Images/startupgrade.png';
 import userdiversity from '../Images/userdiversity.png';
 import { NavLink } from "react-router-dom";
 
-export default function Menu() {
+export default function Menu({data}) {
   return (
-        
         <div className="App-menu">
         <div className='App-logo'>
           <div className='logo'>
@@ -33,7 +32,6 @@ export default function Menu() {
               <li><NavLink to='/formations'  className={({isActive})=>isActive?'active':undefined}><img src={book} />Formations</NavLink></li>
               <li><NavLink to='/3'  className={({isActive})=>isActive?'active':undefined}><img src={outil} />Outils & Pedagogies</NavLink></li>
               <li><NavLink to='/4'  className={({isActive})=>isActive?'active':undefined}><img src={folder} />Bibliotheque</NavLink></li>
-              <li><NavLink to='/utilisateurs'  className={({isActive})=>isActive?'active':undefined}><img src={userdiversity} />Utilisateurs</NavLink></li>
               <li><NavLink to='/5'  className={({isActive})=>isActive?'active':undefined}><img src={calendar} />Calendrier</NavLink></li>
               <li><NavLink to='/6'  className={({isActive})=>isActive?'active':undefined}><img src ={chatt} />Message</NavLink></li>
               <li><NavLink to='/7'  className={({isActive})=>isActive?'active':undefined}><img src={live} />Webinaire</NavLink></li>
@@ -48,7 +46,7 @@ export default function Menu() {
           </div>
         </div>
         <div className='footer-menu'>
-          <span><img src={profit} />Kammogne val<i><img src={dot} /></i></span>
+          <span><img src={profit} />{data.name} {data.firstname}<i><img src={dot} /></i></span>
         </div>
       </div >
 

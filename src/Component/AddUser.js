@@ -1,13 +1,11 @@
-
-
 import { useState } from 'react';
-import img from '../Images/bot.png'
 import adresse from '../Images/adresse.png'
 import person from '../Images/person.png'
 import country from '../Images/country.png'
 import city from '../Images/city.png'
 import '../Css/AddUser.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+
 export default function AddUser() {
     const [showformat, setShowformat] = useState(false);
     const handleshowformat = () => {

@@ -284,3 +284,20 @@
 }
 
 /* end Calenderprofit*/
+
+*{
+    margin: 0;
+  }
+  ::-webkit-scrollbar {
+  width: 0px;
+  }
+  ::-webkit-scrollbar-track {
+  background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+  background: transparent;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+  }
+  

@@ -103,7 +103,11 @@
 
 }
 
+<<<<<<< HEAD
 .App-formation .entete-formation .fa-entete-formation .span {
+=======
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(1) {
+>>>>>>> 58e6419d2557da606eaeed8ac41af3538b65a9b1
     border: 2px solid gray;
     border-radius: 0.4rem;
     cursor: pointer;
@@ -113,14 +117,13 @@
     gap: 0.5rem;
     font-size: 0.9rem;
     padding: 0.2rem 0.5rem;
-    text-decoration: none;
 }
 
-.App-formation .entete-formation .fa-entete-formation a:hover {
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(1):hover {
     color: grey;
 }
 
-.App-formation .entete-formation .fa-entete-formation a img {
+.App-formation .entete-formation .fa-entete-formation span:nth-of-type(1) img {
     width: 1.5rem;
     height: 1.5rem;
 }
