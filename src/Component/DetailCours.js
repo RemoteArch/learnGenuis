@@ -8,7 +8,7 @@ import config from '../config';
 const Apercu = ({data}) => {
     return (
         <div>
-            <video controls style={{ width: '80%', marginTop: '3rem', marginBottom: '1rem' }}>
+            {/* <video controls style={{ width: '80%', marginTop: '3rem', marginBottom: '1rem' }}>
                 <source style={{
                     width: '100%',
                     height: 'auto',
@@ -16,7 +16,7 @@ const Apercu = ({data}) => {
                     display: 'block',
                 }}
                     src={bl} type="video/mp4" />
-            </video>
+            </video> */}
             <div>
                 <p style={{ lineHeight: '2rem' }}>
                     {data.desc}

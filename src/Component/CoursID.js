@@ -73,9 +73,9 @@ export default function CoursID() {
                 <h1>{formation.nom}</h1>
                 <div className='center-coursid' onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)} style={{ opacity: isHovered ? 1 : 0.9, }}>
-                    <video className='entete-video-coursid' controls={isHovered} poster={imgback}>
+                    {/* <video className='entete-video-coursid' controls={isHovered} poster={imgback}>
                         <source style={{ width: '100%', height: '100%' }} src={bl} type="video/mp4" />
-                    </video>
+                    </video> */}
                 </div>
                 <div className='fa-center-coursid'>
                     <p>{module[idModule].desc}</p>
