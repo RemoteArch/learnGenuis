@@ -24,6 +24,9 @@ export default function Formation() {
         }
         fetcFormationdata()
     },[]);
+    
+   
+
 
     return (
         <div className='App-formation'>

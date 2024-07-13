@@ -102,8 +102,95 @@
     width: 60%;
 
 }
+/* Modules name formulaire */
+.App-formname{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.938);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 10;
+}
+.App-formname .blc-formname{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 0 15px rgb(197, 196, 196);
+}
+.App-formname .blc-formname .equal-formname{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    padding: 1rem;
+}
+.App-formname .blc-formname .entete-formname{
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    border-bottom: 1px solid gainsboro;
+}
+.App-formname .blc-formname .entete-formname h1{
+    font-size: 1.5rem;
+}
+.App-formname .blc-formname .entete-formname span{
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.App-formname .blc-formname .entete-formname span:hover{
+    color: gainsboro;
+}
+.App-formname .blc-formname .center-formname{
+    height: 7rem;
+    gap: 0.5rem;
+    justify-content: start;
+    flex-direction: column;
+    /* background-color: yellow; */
+    border-bottom: 1px solid gainsboro;
+}
+.App-formname .blc-formname .center-formname p{
+    font-size: 0.9rem;
+}
+.App-formname .blc-formname .center-formname input{
+    width: 100%;
+    height: 80%;
+    border-radius: 0.5rem;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0 15px gainsboro;
+    outline: none;
+    padding-left: 1rem;
+}
+.App-formname .blc-formname .footer-formname{
+    background-color: ghostwhite;
+    align-items: center;
+    justify-content: end;
+}
+.App-formname .blc-formname .footer-formname a{
+    border-radius: 0.2rem;
+    background: var(--linear-bg-black);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.App-formname .blc-formname .footer-formname a:hover{
+    background: var(--linear-bg-blackhover);
+    
+}
+/* Modules name formulaire */
 
-.App-formation .entete-formation .fa-entete-formation span:nth-of-type(1) {
+
+.App-formation .entete-formation .fa-entete-formation .span {
     border: 2px solid gray;
     border-radius: 0.4rem;
     cursor: pointer;

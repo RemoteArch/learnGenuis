@@ -36,8 +36,8 @@
   --bleuefonce: #202046;
   --gray: #646780;
   --noir: #343a40;
-  --linear-bg-black:linear-gradient(180deg, #464862 0%, #252635 100%);
-  --linear-bg-black:linear-gradient(180deg, #3e49e6 0%, #252635 100%);
+  --linear-bg-blackhover:linear-gradient(180deg, #464862 0%, #252635 100%);
+  --linear-bg-black:linear-gradient(180deg, #181a41 0%, #434669 100%);
 }
 
 

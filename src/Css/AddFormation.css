@@ -1,4 +1,4 @@
-.App-addformation{
+.App-addformation {
     width: 100%;
     position: absolute;
     top: 0;
@@ -7,4 +7,131 @@
     height: 100%;
     overflow: hidden;
     overflow-y: auto;
+}
+
+.App-addformation .fa-center-add-formation {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+.App-addformation .fa-center-add-formation .link-back-form a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    gap: 1rem;
+    font-weight: 400;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.App-addformation .fa-center-add-formation .link-back-form a img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.App-addformation .fa-center-add-formation .entete-name {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.App-addformation .fa-center-add-formation .entete-name .div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.App-addformation .fa-center-add-formation .entete-name .div a {
+    background-color: red;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.4rem 0.7rem 1.4rem;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid gainsboro;
+    font-weight: 600;
+    color: var(--gray);
+    font-size: 0.9rem;
+
+}
+
+.App-addformation .fa-center-add-formation .entete-name .div div {
+    padding: 0.5rem;
+    border: 1px solid var(--noir);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.App-addformation .fa-center-add-formation .entete-name h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.App-addformation .fa-center-add-formation .entete-name img {
+    cursor: pointer;
+
+
+}
+
+.App-addformation .fa-center-add-formation .entete-name .div a:nth-of-type(2) {
+    background: var(--linear-bg-black);
+    color: white;
+
+    border: none;
+}
+
+.App-addformation .fa-center-add-formation .entete-name img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.App-addformation .fa-center-add-formation .link-list {
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 2rem;
+}
+
+.App-addformation .fa-center-add-formation .link-list ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid gainsboro;
+
+}
+
+.App-addformation .fa-center-add-formation .link-list ul li {
+    cursor: pointer;
+    color: var(--gray);
+    height: 1rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    color: gainsboro;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.App-addformation .fa-center-add-formation .link-list ul li:hover{
+    background-color: var(--bleuehover-trans);
+
+}
+.activelinkform {
+    font-weight: bold;
+    border-bottom: 2px solid var(--bleue);
+}
+.App-addformation .fa-center-add-formation .link-list ul li span {}
+.App-addformation .fa-center-add-formation .ctn-add-form{
+    width: 100%;
+    /* background-color: red; */
+    margin-top: 2rem;
 }
