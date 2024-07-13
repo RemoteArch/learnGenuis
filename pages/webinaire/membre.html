@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Participants du Webinaire - LearnGenius</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function validateAccess(email, status) {
+      // Simulated validation process
+      if (status === 'pending') {
+        // Update the status in the table
+        document.getElementById(`status-${email}`).textContent = 'Approuvé';
+        document.getElementById(`status-${email}`).classList.remove('text-yellow-500');
+        document.getElementById(`status-${email}`).classList.add('text-green-500');
+        alert(`L'accès de ${email} a été approuvé.`);
+      } else {
+        alert(`L'accès de ${email} a déjà été approuvé.`);
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="container mx-auto p-5">
+    <h1 class="text-3xl font-bold mb-6">Participants du Webinaire</h1>
+    <div class="bg-white shadow-md rounded-lg overflow-x-auto mb-6">
+      <table class="w-full table-auto">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-4 py-3 text-left font-medium text-gray-700">Nom</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-700">Email</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-700">Rôle</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-700">Statut</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-700">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr>
+            <td class="px-4 py-3">John Doe</td>
+            <td class="px-4 py-3">john.doe@example.com</td>
+            <td class="px-4 py-3">Développeur senior</td>
+            <td class="px-4 py-3 font-medium text-green-500" id="status-john.doe@example.com">Approuvé</td>
+            <td class="px-4 py-3">
+              <button class="bg-indigo-500 text-white font-medium px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" onclick="validateAccess('john.doe@example.com', 'approved')">Approuver</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3">David Lee</td>
+            <td class="px-4 py-3">david.lee@example.com</td>
+            <td class="px-4 py-3">Analyste de données</td>
+            <td class="px-4 py-3 font-medium text-yellow-500" id="status-david.lee@example.com">En attente</td>
+            <td class="px-4 py-3">
+              <button class="bg-indigo-500 text-white font-medium px-4 py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" onclick="validateAccess('david.lee@example.com', 'pending')">Approuver</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

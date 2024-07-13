@@ -8,9 +8,9 @@ import Login from './Component/login';
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import config from './config';
-import VideoConference from './Component/visio';
 import HomePage from './Component/home'
 import './Css/tailwind.min.css';
+import {Webinaire ,WebinaireDetais ,WebinaireLive , WebinaireMembres} from './Component/webinaire';
 
 function App() {
 
@@ -48,7 +48,10 @@ function App() {
     <Routes>
         <Route path='/' element={<HomePage/>} />
         <Route path='/register' element={<Register/>} />
-        <Route path='/visio' element={<VideoConference/>} />
+        <Route path='/webinaire' element={<Webinaire/>} />
+        <Route path='/webinaire/details/:id' element={<WebinaireDetais/>} />
+        <Route path='/webinaire/live/:id' element={<WebinaireLive/>} />
+        <Route path='/webinaire/membres/:id' element={<WebinaireMembres/>} />
         <Route path='*' element={
           <div>
             {!data.connect && <Login/>}

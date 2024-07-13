@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer un Webinaire - LearnGenius</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="container mx-auto py-12">
+    <div class="bg-white shadow-md rounded-lg m-8 p-8">
+      <h2 class="text-2xl font-bold mb-6">Créer un Nouveau Webinaire</h2>
+      <form>
+        <div class="mb-6">
+          <label for="titre" class="block text-gray-700 font-medium mb-2">Titre du webinaire</label>
+          <input type="text" id="titre" name="titre" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" required>
+        </div>
+        <div class="mb-6">
+          <label for="description" class="block text-gray-700 font-medium mb-2">Description du webinaire</label>
+          <textarea id="description" name="description" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" required></textarea>
+        </div>
+        <div class="grid grid-cols-2 gap-6 mb-6">
+          <div>
+            <label for="heure-debut" class="block text-gray-700 font-medium mb-2">Heure de début</label>
+            <input type="time" id="heure-debut" name="heure-debut" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" required>
+          </div>
+          <div>
+            <label for="heure-fin" class="block text-gray-700 font-medium mb-2">Heure de fin</label>
+            <input type="time" id="heure-fin" name="heure-fin" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" required>
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="image-banniere" class="block text-gray-700 font-medium mb-2">Image de bannière</label>
+          <input type="file" id="image-banniere" name="image-banniere" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-500" required>
+        </div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md">
+          Créer le webinaire
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

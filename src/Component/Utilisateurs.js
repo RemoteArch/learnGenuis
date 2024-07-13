@@ -9,6 +9,7 @@ import filter from '../Images/filter.png';
 import dot from '../Images/dot.png';
 
 import search from '../Images/search.png';
+
 export default function Utilisateurs() {
     return (
         <div className='App-utilisateur'>

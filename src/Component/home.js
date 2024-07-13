@@ -16,14 +16,14 @@ export default function HomePage(){
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className="text-gray-600 hover:text-gray-800">
+              <a href='#apropos' className="text-gray-600 hover:text-gray-800">
                 À propos
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/contact" className="text-gray-600 hover:text-gray-800">
+              <a to="#conctact" className="text-gray-600 hover:text-gray-800">
                 Contact
-              </NavLink>
+              </a>
             </li>
             <li>
               <NavLink
@@ -38,7 +38,8 @@ export default function HomePage(){
       </header>
 
       <main className="container mx-auto  p-16">
-        <section className="text-center">
+        <section className="text-center flex items-center justify-center">
+          <div>
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Bienvenue sur LearnGenius
           </h1>
@@ -51,6 +52,7 @@ export default function HomePage(){
           >
             Découvrir nos cours
           </NavLink>
+          </div>
         </section>
 
         <section className="mt-16">
@@ -142,9 +144,9 @@ export default function HomePage(){
         </section>
       </main>
 
-      <footer className="bg-gray-800 text-white py-6">
+      <footer className="bg-white text-white p-6">
         <div className="container mx-auto flex justify-between items-center">
-          <p>&copy; 2023 LearnGenius. Tous droits réservés.</p>
+          <p>&copy; 2024 LearnGenius. Tous droits réservés.</p>
           <ul className="flex space-x-4">
             <li>
               <a href="#" className="hover:text-gray-400">

@@ -3,7 +3,7 @@ import { NavLink , useParams } from 'react-router-dom';
 import '../Css/CoursID.css';
 import arrowback from '../Images/arrowback.png';
 import whitestar from '../Images/whitestar.png';
-import bl from '../Images/bl.mp4';
+// import bl from '../Images/bl.mp4';
 import imgback from '../Images/imgback.jpg';
 import liste from '../Images/liste.png';
 import infos from '../Images/infos.png';

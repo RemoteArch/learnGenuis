@@ -60,7 +60,7 @@ export default function Login(){
                         <input className="shadow appearance-none border-2 border-gray-200 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:border-indigo-500 focus:shadow-outline" name="password" value={UserData.password} onChange={InputChange} type="password" placeholder="Entrez votre password" required />
                     </div>
                     <p>{error}</p>
-                    <button className="bg-indigo-500 w-full hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" type="submit">S'inscrire</button>
+                    <button className="bg-indigo-500 w-full hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" type="submit">Se connecter</button>
                 </form>
             </div>
         </div>
