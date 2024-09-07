@@ -8,6 +8,8 @@ import { Route, Router, Routes } from 'react-router-dom';
 import Utilisateurs from './Utilisateurs';
 import DetailCours from './DetailCours';
 import AddFormation from './AddFormation';
+import {Webinaire ,WebinaireDetais ,WebinaireLive , WebinaireMembres} from './webinaire';
+
 export default function Appcontent() {
     return (
         <div className='App-content'>
@@ -18,12 +20,16 @@ export default function Appcontent() {
                     <button><img src={search} /></button>
                 </div>
             </div>
-            <div className='App-component'>
+            <div className='App-component h-screen overflow-y-scroll'>
                 <Routes>
                     <Route path='/1' element='ras1' />
-                    <Route path='/Formations/detail cours/AddFormation' element={<AddFormation />} />
-                    <Route path='/Formations/detail cours/coursID' element={<CoursID />} />
-                    <Route path='/Formations/detail cours' element={<DetailCours />} />
+                    <Route path='/webinaire' element={<Webinaire/>} />
+                    <Route path='/webinaire/details/:id' element={<WebinaireDetais/>} />
+                    <Route path='/webinaire/live/:id' element={<WebinaireLive/>} />
+                    <Route path='/webinaire/membres/:id' element={<WebinaireMembres/>} />
+                    <Route path='/Formations/detail cours/AddFormation/:nom' element={<AddFormation />} />
+                    <Route path='/Formations/learn/:id' element={<CoursID />} />
+                    <Route path='/Formations/detail/:id' element={<DetailCours />} />
                     <Route path='/formations' element={<Formation />} />
                     <Route path='/utilisateurs/AddUser' element={<AddUser />} />
                     <Route path='/3' element='ras3' />

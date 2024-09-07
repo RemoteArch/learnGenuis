@@ -1,9 +1,9 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink , useParams } from 'react-router-dom';
 import '../Css/AddFormation.css';
 import back from '../Images/arrowback.png';
 import dot from '../Images/dot.png';
 import star from '../Images/star.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AddContenueForm from '../Component/AddContenuForm';
 import AddDocumentsForm from '../Component/AddDocumentsForm';
 import AddMembreForm from '../Component/AddMembreForm';
@@ -12,8 +12,31 @@ import AddSuiviForm from '../Component/AddSuiviForm';
 import DetailFormation from '../Component/DetailFormation';
 export default function AddFormation() {
     const [activeBlock, setActiveBlock] = useState(0);
+    let {nom} = useParams()
+    const [formationData, setformationData] = useState({
+        nom:"",
+        method:"",
+        nbreMembre: 10,
+        nbreFavories:25,
+        nbreModules:15,
+        nbrePages:10,
+        nbreAbonne: 30,
+        nbreHeure:15,
+        categorie:"",
+        desc:"",
+        niveau:"",
+        banniere:"",
+        tarif:[ ],
+        prerequis:"",
+        mescours:[],
+        abonnes:[],
+        id:""
+    });
 
-    const [formationData, setformationData] = useState([]);
+    useEffect(()=>{
+        document.getElementById("nom").textContent = nom
+        setformationData({...formationData ,nom:nom})
+    },[])
 
     const handleBlockClick = (index) => {
         setActiveBlock(index);
@@ -27,7 +50,7 @@ export default function AddFormation() {
                     <NavLink><img src={back} /> Retourner au formation</NavLink>
                 </div>
                 <div className='entete-name'>
-                    <h1>React</h1>
+                    <h1 id="nom">React</h1>
                     <div className='div'>
                         <img src={star} />
                         <NavLink>Voire la formation</NavLink>
@@ -46,12 +69,12 @@ export default function AddFormation() {
                     </ul>
                 </div>
                 <div className='ctn-add-form'>
-                    {activeBlock === 0 && <DetailFormation />}
-                    {activeBlock === 1 && <AddMembreForm />}
-                    {activeBlock === 2 && <AddContenueForm />}
-                    {activeBlock === 3 && <AddSuiviForm />}
-                    {activeBlock === 4 && <AddDocumentsForm />}
-                    {activeBlock === 5 && <AddParametreForm />}
+                    {activeBlock === 0 && <DetailFormation data={formationData}  setData={setformationData}/>}
+                    {activeBlock === 1 && <AddMembreForm data={formationData}  setData={setformationData} />}
+                    {activeBlock === 2 && <AddContenueForm data={formationData}  setData={setformationData} />}
+                    {activeBlock === 3 && <AddSuiviForm data={formationData}  setData={setformationData} />}
+                    {activeBlock === 4 && <AddDocumentsForm data={formationData} setData={setformationData} />}
+                    {activeBlock === 5 && <AddParametreForm data={formationData} setData={setformationData} />}
 
 
                 </div>

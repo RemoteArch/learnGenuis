@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { NavLink , useNavigate } from 'react-router-dom';
+import { useEffect, useState  } from 'react';
 
 import '../Css/Formation.css';
 import liste from '../Images/liste.png';
@@ -14,7 +14,7 @@ import notifspeaker from '../Images/notifspeak.png';
 import whitestar from '../Images/whitestar.png';
 import search from '../Images/search.png';
 export default function FormModules({ data }) {
-
+    let navigate = useNavigate()
     const [showGrid, setshowGrid] = useState(false);
 
     const changeshow = () => {
@@ -39,6 +39,13 @@ export default function FormModules({ data }) {
     const handleshowformname = () => {
         setShowformname(!showformname);
     }
+
+    const handle = (event)=>{
+        event.preventDefault()
+        let name = document.getElementById("textNom").value
+        navigate('/Formations/detail cours/AddFormation/'+name)
+    }
+
     const Formname = () => {
         return (
             <section className='App-formname'>
@@ -49,10 +56,12 @@ export default function FormModules({ data }) {
                     </section>
                     <section className='equal-formname center-formname'>
                         <p>Nom de la formation (Obligatoire)</p>
-                        <input type='texte' placeholder='Ma formation' />
+                        <input id="textNom" type='texte'  placeholder='Ma formation' />
                     </section>
                     <section className='equal-formname footer-formname'>
-                        <NavLink to='/Formations/detail cours/AddFormation'>Creer</NavLink>
+                        {/* <NavLink>
+                            </NavLink> */}
+                            <button onClick={handle}>Creer</button>
                     </section>
                 </section>
             </section>

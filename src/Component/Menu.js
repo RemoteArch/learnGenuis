@@ -34,7 +34,7 @@ export default function Menu({data}) {
               <li><NavLink to='/4'  className={({isActive})=>isActive?'active':undefined}><img src={folder} />Bibliotheque</NavLink></li>
               <li><NavLink to='/5'  className={({isActive})=>isActive?'active':undefined}><img src={calendar} />Calendrier</NavLink></li>
               <li><NavLink to='/6'  className={({isActive})=>isActive?'active':undefined}><img src ={chatt} />Message</NavLink></li>
-              <li><NavLink to='/7'  className={({isActive})=>isActive?'active':undefined}><img src={live} />Webinaire</NavLink></li>
+              <li><NavLink to='/webinaire'  className={({isActive})=>isActive?'active':undefined}><img src={live} />Webinaire</NavLink></li>
               <li><NavLink to='/8'  className={({isActive})=>isActive?'active':undefined}><img src={bot} />Robe IA</NavLink></li>
               <li><NavLink to='/9'  className={({isActive})=>isActive?'active':undefined}><img src={settings} />Paramettre</NavLink></li>
             </ul>

@@ -104,6 +104,7 @@ export function WebinaireLive(){
         }
       }
       getWebinaire();
+      startVideoCapture()
     },[]);
 
     const startVideoCapture = async () =>  {
@@ -141,16 +142,16 @@ export function WebinaireLive(){
                 <p className='text-white font-bold text-lg'>Participants</p>
                 <ul className='space-y-2 mt-2'>
                   <div className='flex justify-between items-center'>
-                      <li className='text-white'>John Doe</li>
+                      <li className='text-white'>vous</li>
                       <img src={nocamera} className='text-white w-5 h-5'/>
                   </div>
                 </ul>
               </div>
             </div>
             <div className='w-3/4 h-96 flex justify-center items-center'>
-              { webinaire.myid == myid && 
+              {/* { webinaire.myid == myid &&  */}
                 <video id="videoOutput" autoPlay className='rounded-md shadow-lg w-full h-full'/>
-              }
+              
               
             </div>
           </div>
